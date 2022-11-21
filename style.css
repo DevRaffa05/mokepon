@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  background-size: cover;
+  background-repeat:space;
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+
+}
+#seleccionarMascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titulo {
+  font-size: 70px;
+  margin: 0px;
+  padding: 0;
+  font-family: 'Rubik Iso', cursive;
+  color: black;
+  font-style: italic;
+  text-align: center;
+}
+.subtitulo {
+  color:black;
+  font-size: 30px;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.hipodoge img {
+  background-color: #9C9EFE;
+}
+.tarjeta-de-mokepon {
+  cursor: pointer;
+  border: 4px solid white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  padding: 23px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.755);
+}
+.tarjeta-de-mokepon img {
+  width: 210px;
+  border-radius: 30px;
+  border: 4px solid rgba(0, 0, 0, 0.486);
+}
+#botonMascota {
+  background-color: white;
+  border-radius: 15px;
+  border: none;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  height: 50px;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+  width: 300px;
+  cursor: pointer;
+}
+input {
+  display: none;
+}
+input:checked+label {
+  background: #000000;
+  color: white;
+}
+#seleccionarAtaque {
+  flex-direction: column;
+  align-items: center;
+}
+.btnAtaque {
+  background-color: #ffffff73;
+  padding: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  height: 100px;
+  box-shadow: 0px 0px 10px 10px rgb(255, 255, 255);
+}
+.btnsAtaque {
+  font-size: 25px;
+  padding: 10px;
+}
+.botonFuego {
+  background-color: #FFF323;
+  border: solid 3px #f9071797;
+}
+.botonAgua {
+  border: solid 3px #1C6DD0;
+  background-color:#4873ff;
+}
+.botonTierra {
+  border: solid 3px #61481C;
+  background-color: #A47E3B ;
+}
+#mensajes {
+  font-size: 25px;
+  font-family: 'Fredoka One', cursive;
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background: radial-gradient(circle, rgba(247, 236, 9, 1) 0%, rgba(62, 199, 11, 1) 100%);
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 26px 16px rgba(147, 125, 194, 1);
+  -moz-box-shadow: 0px 0px 26px 16px rgba(147, 125, 194, 1);
+  box-shadow: 0px 0px 26px 16px rgba(147, 125, 194, 1);
+}
+#botonReiniciar {
+  font-family: 'Fredoka One', cursive;
+  border: none;
+  color:#4873ff;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.685);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  letter-spacing: 3px;
+
+}
+.ataques {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+.ataques-jugador, .ataques-enemigo {
+  color: white;
+  font-size: 25px;
+}
+.ataques-jugador {
+  width: 300px;
+}
+.ataques-enemigo {
+  width: 300px;
+}
+
+#ver-mapa {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#ver-mapa button{
+  background-color: white;
+  border-radius: 15px;
+  border: none;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  height: 50px;
+  letter-spacing: 1.5px;
+  margin: 5px 0;
+  width: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 630px) {
+  .titulo {
+    font-size: 50px;
+    margin: 0px;
+    padding: 0;
+    font-style: italic;
+    text-align: center;
+  }
+  .tarjetas {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .tarjetas, .btnAtaque{
+    flex-direction: column;
+  }
+  .btnAtaque {
+    gap: 15px;
+    width: 200px;
+    height: 100%;
+  }
+  #mensajes {
+    width: 240px;
+    padding: 10px;
+  }
+  .ataques {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+  .ataques-jugador, .ataques-enemigo {
+    width: 150px;
+  }
+  
+}
+
+@media (max-width: 400px) {
+  #ver-mapa div{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+
+
